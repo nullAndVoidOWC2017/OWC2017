@@ -1,0 +1,3 @@
+deploy.sh
+rsync_exclude.txt
+wp-config.php
