@@ -1,19 +1,24 @@
 <?php
 
-	echo '<section class="separator-one" id="ribbon_bottom">';
+
+	echo '<section class="separator-one" id="home-calendar">';
+
 
 		echo '<div class="color-overlay">';
+			echo '<div class="container">';
+				echo '<h2 class="container text dark-text home-calendar-title" data-scrollreveal="enter left after 0s over 1s">';
 
-			echo '<h3 class="container text" data-scrollreveal="enter left after 0s over 1s">';
+					echo 'Volunteer Calendar';
 
-				echo 'Volunteer Calendar';
+				echo '</h2>';
 
-			echo '</h3>';
-
-			echo do_shortcode('[calendar id="5"]');
-
+				echo do_shortcode('[calendar id="5"]');
+				
+			echo '</div>';
 		echo '</div>';
 
+
 	echo '</section>';
+
 
 ?>

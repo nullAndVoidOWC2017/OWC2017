@@ -97,7 +97,8 @@
 									echo '<span class="icon"><img src="'.esc_url( $zerif_address_icon ).'" alt="" /></span>';
 								}
 								if( ! empty( $zerif_address ) ) {
-									echo wp_kses_post( $zerif_address );
+									//echo wp_kses_post( $zerif_address );
+									echo '<a href="'.esc_url( $zerif_address ).'">Locations</a>';
 								}
 							echo '</li>';
 
@@ -106,16 +107,18 @@
 									echo '<span class="icon"><img src="'.esc_url( $zerif_email_icon ).'" alt="" /></span>';
 								}
 								if( ! empty( $zerif_email) ) {
-									echo wp_kses_post( $zerif_email );
+									//echo wp_kses_post( $zerif_email );
+									echo '<a href="mailto:'.$zerif_email.'">Email Us</a>';
 								}
 							echo '</li>';
 
 							echo '<li>';
 								if( ! empty( $zerif_phone_icon ) ) {
-									echo '<span class="icon"><img src="'.esc_url( $zerif_phone_icon ).'" alt="" /></span>';
+									echo '<span class="icon"><img src="'.$zerif_phone_icon.'" alt="" /></span>';
 								}
 								if( ! empty( $zerif_phone ) ) {
-									echo wp_kses_post( $zerif_phone );
+									//echo wp_kses_post( $zerif_phone );
+									echo '<a href="tel:'.$zerif_phone.'">'.$zerif_phone.'</a>';
 								}
 							echo '</li>';
 						echo '</ul>';

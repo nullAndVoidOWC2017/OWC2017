@@ -9,11 +9,12 @@ get_header(); ?>
 </header> <!-- / END HOME SECTION  -->
 <?php zerif_after_header_trigger(); ?>
 
-<div id="content" class="site-content">
-	<img class="img-responsive" src="<?php echo the_post_thumbnail( 'post-thumbnail', '' ); ?>"/>
+<div id="hero" class="hero-image text-center">
+	<img class="img-responsive" src="<?php echo get_the_post_thumbnail_url( null, 'post-thumbnail', '' ); ?>"/>
+	<h1 class="hero-title"><?php echo get_the_title(); ?></h1>
 </div>
 
-<div id="content" class="site-content">
+<div id="content" class="site-content hero-content">
 
 	<div class="container">
 

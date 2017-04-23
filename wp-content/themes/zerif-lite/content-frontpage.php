@@ -30,11 +30,6 @@ $zerif_bigtitle_show = get_theme_mod('zerif_bigtitle_show');
 	endif;
 
 
-	/* RIBBON WITH BOTTOM BUTTON */
-
-	get_template_part( 'sections/ribbon_with_bottom_button' );
-
-
 	/* ABOUT US */
 
 	$zerif_aboutus_show = get_theme_mod('zerif_aboutus_show');
@@ -78,11 +73,6 @@ $zerif_bigtitle_show = get_theme_mod('zerif_bigtitle_show');
 	zerif_after_testimonials_trigger();
 
 	endif;
-
-
-	/* RIBBON WITH RIGHT SIDE BUTTON */
-
-	get_template_part( 'sections/ribbon_with_right_button' );
 
 
 	/* LATEST NEWS */
