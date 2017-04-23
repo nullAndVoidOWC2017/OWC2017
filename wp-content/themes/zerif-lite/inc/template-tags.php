@@ -450,3 +450,11 @@ function zerif_primary_navigation_function() {
 	</nav>
 	<?php
 }
+
+function zerif_scondary_navigation_function() {
+	?>
+	<nav class="" id="secondary-navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+		<?php wp_nav_menu( array('theme_location' => 'secondary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-right responsive-nav main-nav-list', 'fallback_cb' => 'zerif_wp_page_menu')); ?>
+	</nav>
+	<?php
+}

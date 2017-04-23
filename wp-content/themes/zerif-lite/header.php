@@ -31,18 +31,18 @@
 <?php endif;
 
 	zerif_top_body_trigger();
-	
+
 	/* Preloader */
 
 	if(is_front_page() && !is_customize_preview() && get_option( 'show_on_front' ) != 'page' ):
- 
+
 		$zerif_disable_preloader = get_theme_mod('zerif_disable_preloader');
-		
+
 		if( isset($zerif_disable_preloader) && ($zerif_disable_preloader != 1)):
 			echo '<div class="preloader">';
 				echo '<div class="status">&nbsp;</div>';
 			echo '</div>';
-		endif;	
+		endif;
 
 	endif; ?>
 
@@ -55,6 +55,12 @@
 
 
 <header id="home" class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+
+	<div id="utility-nav">
+		<div class="container">
+			<?php zerif_scondary_navigation_function(); ?>
+		</div>
+	</div>
 
 	<div id="main-nav" class="navbar navbar-inverse bs-docs-nav" role="banner">
 

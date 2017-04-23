@@ -37,6 +37,7 @@ function zerif_setup() {
     /* Register primary menu */
     register_nav_menus(array(
         'primary' => __('Primary Menu', 'zerif-lite'),
+        'secondary' => __('Secondary Menu', 'zerif-lite'),
     ));
 
     /* Enable support for Post Formats. */
@@ -131,6 +132,7 @@ function zerif_setup() {
 	add_action( 'zerif_sidebar', 'zerif_sidebar_function' ); #Outputs the sidebar
 
 	add_action( 'zerif_primary_navigation', 'zerif_primary_navigation_function' ); #Outputs the navigation menu
+    add_action( 'zerif_secondary_navigation', 'zerif_secondary_navigation_function' ); #Outputs the secondry navigation menu
 
     add_filter( 'excerpt_more', 'zerif_excerpt_more' );
 
@@ -599,6 +601,8 @@ function zerif_scripts() {
 
 	wp_enqueue_style( 'zerif_font_all', add_query_arg( array( 'family' => urlencode( 'Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic' ), 'subset' => urlencode( 'latin' ) ), "//fonts.googleapis.com/css" ) );
 
+    wp_enqueue_style( 'zerif_font_custom', add_query_arg( array( 'family' => urlencode( 'Varela Round:400' ), 'subset' => urlencode( 'latin' ) ), "//fonts.googleapis.com/css" ) );
+
     wp_enqueue_style( 'zerif_bootstrap_style', get_template_directory_uri() . '/css/bootstrap.css' );
 
     wp_style_add_data( 'zerif_bootstrap_style', 'rtl', 'replace' );
@@ -657,6 +661,9 @@ function zerif_scripts() {
     /* HTML5Shiv*/
     wp_enqueue_script( 'zerif_html5', get_template_directory_uri() . '/js/html5.js');
     wp_script_add_data( 'zerif_html5', 'conditional', 'lt IE 9' );
+
+    /* Custom JS */
+    wp_enqueue_script( 'zerif_custom', get_template_directory_uri() . '/js/custom.js');
 
     /* parallax effect */
     if ( !wp_is_mobile() ){

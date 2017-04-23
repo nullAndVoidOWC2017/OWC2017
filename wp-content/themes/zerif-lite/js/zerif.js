@@ -139,12 +139,14 @@ jQuery(document).ready(function() {
             // if so, ad the fixed class
 
             jQuery('#main-nav').addClass('fixed');
+            jQuery('#utility-nav').addClass('fixed');
 
         } else {
 
             // otherwise remove it
 
             jQuery('#main-nav').removeClass('fixed');
+            jQuery('#utility-nav').removeClass('fixed');
 
         }
 
@@ -184,7 +186,7 @@ jQuery(document).ready(function(){
                 jQuery('html,body').animate({
                     scrollTop: target.offset().top - headerHeight + 10
                 }, 1200);
-                return false; 
+                return false;
             }
         }
     });
@@ -696,8 +698,8 @@ jQuery(window).resize(function() {
 var initHeight  = 0,
     initWidth   = 0;
 var initViewMode,
-    onlyInit = true; 
-jQuery( document ).ready( function() { 
+    onlyInit = true;
+jQuery( document ).ready( function() {
     initViewMode = type_view();
     mobile_bg_fix();
 } );
@@ -712,8 +714,8 @@ function mobile_bg_fix() {
                 'height': window.innerHeight + 100
             } );
             initViewMode = viewMode;
-            if ( onlyInit == true ) { 
-                onlyInit = false; 
+            if ( onlyInit == true ) {
+                onlyInit = false;
                 bodyClass   = jQuery( 'body.custom-background' );
                 imgURL      = bodyClass.css( 'background-image' );
                 imgSize     = bodyClass.css( 'background-size' );
@@ -812,7 +814,7 @@ jQuery( document ).ready( function() {
 	  }
     };
     ZerifSubmenuOrientation.prototype.max_deep = function ( item ) {
-      var maxDepth      = -1, 
+      var maxDepth      = -1,
           currentDepth  = -1;
       $( item + " li:not(:has(ul))").each(function() {
         currentDepth = $(this).parents("ul").length;
