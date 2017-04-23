@@ -1739,6 +1739,13 @@ ul.nav > li.current_page_item.current > a:before {
 	display: block;
 }
 
+/*----  SECTION:  HOME > HERO (BIG TITLE)   ----*/
+.home-hero-logo {
+
+}
+.hero-logo {
+
+}
 
 /*----  SECTION:  HOME > INTRO AND SHORT MSGS   ----*/
 .intro {
@@ -1775,7 +1782,7 @@ ul.nav > li.current_page_item.current > a:before {
 .latest-news {
 	padding-bottom: 66px;
 	padding-top: 100px;
-	background: #FFFFFF;
+	background: #ddd;
 }
 .carousel-inner {
 /*	margin: 0 30px; */
@@ -1907,7 +1914,7 @@ ul.nav > li.current_page_item.current > a:before {
 	width: 145px;
 	height: 145px;
 	margin: auto;
-	border-radius: 50%;
+	border-radius: 0;
 	border: 10px solid #ececec;
 	margin-bottom: 20px;
 	position: relative;
@@ -3090,11 +3097,38 @@ width: -webkit-calc(100% / 4);
 	font-size: 30px;
 	margin-bottom: 10px;
 }
+
+.footer-list li {
+	text-align: left;
+	margin-bottom:7px;
+}
+
+.footer-list li,
+.footer-list li a {
+	font-size: 18px;
+}
+
+.footer-list li .icon,
+.footer-list li .fa {
+	display: inline-block;
+	width: 15px;
+	margin-right: 10px;
+	margin-bottom: 10px
+	font-size: larger;
+}
+
 .copyright {
 	padding-top: 68px;
 	padding-bottom: 68px;
 	background: #171717;
 }
+
+.social-media {
+	color: #939393;
+	padding-top: 67px;
+	padding-bottom: 30px;
+}
+
 .social {
 	margin: 0 0 1.5em 0 !important;
 }
@@ -3113,6 +3147,13 @@ width: -webkit-calc(100% / 4);
 	margin-bottom: 0;
 	color: #939393;
 }
+
+.subscribe-form {
+	color: #eee;
+	padding-top: 67px;
+	padding-bottom: 30px;
+}
+
 .footer-widget-wrap > .container {
 	text-align: center;
 }

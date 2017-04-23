@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Full Width Page
+ * Template Name: Full Width Page Hero
  */
 get_header(); ?>
 
@@ -8,6 +8,11 @@ get_header(); ?>
 
 </header> <!-- / END HOME SECTION  -->
 <?php zerif_after_header_trigger(); ?>
+
+<div id="content" class="site-content">
+	<img class="img-responsive" src="<?php echo the_post_thumbnail( 'post-thumbnail', '' ); ?>"/>
+</div>
+
 <div id="content" class="site-content">
 
 	<div class="container">
@@ -25,7 +30,7 @@ get_header(); ?>
 					<?php
 						while ( have_posts() ) : the_post();
 
-							get_template_part( 'content', 'page' );
+							get_template_part( 'content', 'page-hero' );
 
 							// If comments are open or we have at least one comment, load up the comment template
 							if ( comments_open() || '0' != get_comments_number() ) :

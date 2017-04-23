@@ -3,10 +3,10 @@
  * Zerif Lite functions and definitions
  */
 
-function zerif_setup() {    
-	
+function zerif_setup() {
+
     global $content_width;
-	
+
     if (!isset($content_width)) {
         $content_width = 640;
     }
@@ -17,7 +17,7 @@ function zerif_setup() {
      * If you're building a theme based on zerif, use a find and replace
      * to change 'zerif-lite' to the name of your theme in all the template files
      */
-    load_theme_textdomain('zerif-lite', get_template_directory() . '/languages'); 
+    load_theme_textdomain('zerif-lite', get_template_directory() . '/languages');
 
     add_theme_support('automatic-feed-links');
 
@@ -61,7 +61,7 @@ function zerif_setup() {
         'comment-form',
         'gallery',
     ));
-	
+
 	/* Enable support for title-tag */
 	add_theme_support( 'title-tag' );
 
@@ -516,7 +516,7 @@ function zerif_lite_is_static_frontpage() {
  * Register widgetized area and update sidebar with default widgets.
  */
 
-function zerif_widgets_init() {    
+function zerif_widgets_init() {
 
 	register_sidebar(array(
         'name' => __('Sidebar', 'zerif-lite'),
@@ -536,8 +536,8 @@ function zerif_widgets_init() {
         'after_title' => '</h1>',
     ));
 
-    register_sidebars( 
-        3, 
+    register_sidebars(
+        3,
         array(
             'name'          => __('Footer area %d','zerif-lite'),
             'id'            => 'zerif-sidebar-footer',
@@ -545,9 +545,9 @@ function zerif_widgets_init() {
             'after_widget'  => '</aside>',
             'before_title'  => '<h1 class="widget-title">',
             'after_title'   => '</h1>'
-        ) 
+        )
     );
-    
+
 }
 
 add_action('widgets_init', 'zerif_widgets_init');
@@ -567,7 +567,7 @@ function zerif_slug_fonts_url() {
     $monserrat = _x( 'on', 'Monserrat font: on or off', 'zerif-lite' );
 
     $zerif_use_safe_font = get_theme_mod('zerif_use_safe_font');
-    
+
     if ( ( 'off' !== $lato || 'off' !== $monserrat || 'off' !== $homemade ) && isset($zerif_use_safe_font) && ($zerif_use_safe_font != 1) ) {
         $font_families = array();
 
@@ -577,7 +577,7 @@ function zerif_slug_fonts_url() {
          if ( 'off' !== $monserrat ) {
             $font_families[] = 'Montserrat:400,700';
         }
-        
+
         if ( 'off' !== $homemade ) {
             $font_families[] = 'Homemade Apple';
         }
@@ -593,14 +593,14 @@ function zerif_slug_fonts_url() {
  * Enqueue scripts and styles.
  */
 
-function zerif_scripts() {    
+function zerif_scripts() {
 
 	wp_enqueue_style( 'zerif_font', zerif_slug_fonts_url(), array(), null );
 
 	wp_enqueue_style( 'zerif_font_all', add_query_arg( array( 'family' => urlencode( 'Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic' ), 'subset' => urlencode( 'latin' ) ), "//fonts.googleapis.com/css" ) );
-    
+
     wp_enqueue_style( 'zerif_bootstrap_style', get_template_directory_uri() . '/css/bootstrap.css' );
-	
+
     wp_style_add_data( 'zerif_bootstrap_style', 'rtl', 'replace' );
 
     wp_enqueue_style( 'zerif_fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), 'v1' );
@@ -623,9 +623,9 @@ function zerif_scripts() {
     wp_style_add_data( 'zerif_ie_style', 'conditional', 'lt IE 9' );
 
     if ( wp_is_mobile() ){
-        
+
         wp_enqueue_style( 'zerif_style_mobile', get_template_directory_uri() . '/css/style-mobile.css', array('zerif_bootstrap_style', 'zerif_style'),'v1' );
-    
+
     }
 
     /* Bootstrap script */
@@ -638,8 +638,8 @@ function zerif_scripts() {
     $zerif_disable_smooth_scroll = get_theme_mod( 'zerif_disable_smooth_scroll' );
     if( isset( $zerif_disable_smooth_scroll ) && ( $zerif_disable_smooth_scroll != 1 ) ):
         wp_enqueue_script( 'zerif_smoothscroll', get_template_directory_uri() . '/js/smoothscroll.js', array("jquery"), '20120206', true );
-    endif;  
-	
+    endif;
+
 	/* scrollReveal script */
 	if ( !wp_is_mobile() ){
 		wp_enqueue_script( 'zerif_scrollReveal_script', get_template_directory_uri() . '/js/scrollReveal.js', array("jquery"), '20120206', true  );
@@ -672,7 +672,7 @@ function zerif_scripts() {
     }
 
 	add_editor_style('/css/custom-editor-style.css');
-	
+
 }
 add_action('wp_enqueue_scripts', 'zerif_scripts');
 
@@ -702,17 +702,17 @@ add_filter( 'wpseo_next_rel_link', 'zerif_remove_yoast_rel_link' );
 
 add_action('tgmpa_register', 'zerif_register_required_plugins');
 
-function zerif_register_required_plugins() {	
-	
+function zerif_register_required_plugins() {
+
 	$wp_version_nr = get_bloginfo('version');
-	
+
 	if( $wp_version_nr < 3.9 ):
 
 		$plugins = array(
 			array(
 				'name' => 'Widget customizer',
-				'slug' => 'widget-customizer', 
-				'required' => false 
+				'slug' => 'widget-customizer',
+				'required' => false
 			),
 			array(
 				'name'      => 'Pirate Forms',
@@ -725,9 +725,9 @@ function zerif_register_required_plugins() {
 				'required'  => false,
 			)
 		);
-		
+
 	else:
-	
+
 		$plugins = array(
 			array(
 				'name'      => 'Pirate Forms',
@@ -740,7 +740,7 @@ function zerif_register_required_plugins() {
 				'required'  => false,
 			)
 		);
-	
+
 	endif;
 
     $config = array(
@@ -781,7 +781,7 @@ function zerif_register_required_plugins() {
 
 require get_template_directory() . '/inc/jetpack.php';
 
-function zerif_wp_page_menu() {    
+function zerif_wp_page_menu() {
 
 	echo '<ul class="nav navbar-nav navbar-right responsive-nav main-nav-list">';
 
@@ -793,7 +793,7 @@ function zerif_wp_page_menu() {
 
 add_filter('the_title', 'zerif_default_title');
 
-function zerif_default_title($title) {    
+function zerif_default_title($title) {
 
 	if ($title == '')
 
@@ -814,38 +814,39 @@ function zerif_register_widgets() {
 	if ( !defined("THEMEISLE_COMPANION_VERSION") ) {
 
 		if ( zerif_check_if_old_version_of_theme() ) {
+			register_widget( 'zerif_about_block' );
 			register_widget( 'zerif_ourfocus' );
 			register_widget( 'zerif_testimonial_widget' );
 			register_widget( 'zerif_clients_widget' );
 			register_widget( 'zerif_team_widget' );
 		}
-		
+
 	}
-	
-	
+
+
 	$zerif_lite_sidebars = array ( 'sidebar-ourfocus' => 'sidebar-ourfocus', 'sidebar-testimonials' => 'sidebar-testimonials', 'sidebar-ourteam' => 'sidebar-ourteam' );
-	
+
 	/* Register sidebars */
 	foreach ( $zerif_lite_sidebars as $zerif_lite_sidebar ):
 		$extra_class = '';
 		if( $zerif_lite_sidebar == 'sidebar-ourfocus' ):
-		
+
 			$zerif_lite_name = __('Our focus section widgets', 'zerif-lite');
-		
+
 		elseif( $zerif_lite_sidebar == 'sidebar-testimonials' ):
 			$extra_class = 'feedback-box';
 			$zerif_lite_name = __('Testimonials section widgets', 'zerif-lite');
-			
+
 		elseif( $zerif_lite_sidebar == 'sidebar-ourteam' ):
-		
+
 			$zerif_lite_name = __('Our team section widgets', 'zerif-lite');
-			
+
 		else:
-		
+
 			$zerif_lite_name = $zerif_lite_sidebar;
-			
+
 		endif;
-		
+
         register_sidebar(
             array (
                 'name'          => $zerif_lite_name,
@@ -854,10 +855,11 @@ function zerif_register_widgets() {
                 'after_widget' => '</span>',
             )
         );
-		
+
     endforeach;
-	
+
 }
+
 
 /**************************/
 /****** our focus widget */
@@ -1815,3 +1817,9 @@ function zerif_starter_content() {
 
 }
 add_action( 'after_setup_theme', 'zerif_starter_content' );
+
+/**
+ * Hack to stop WP from removing BR tags in text editor-style
+ * because we are using HTML in the text editor for wonky reasons
+ */
+remove_filter( 'the_content', 'wpautop' );

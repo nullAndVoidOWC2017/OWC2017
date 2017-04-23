@@ -29,9 +29,11 @@ $zerif_bigtitle_show = get_theme_mod('zerif_bigtitle_show');
 
 	endif;
 
+
 	/* RIBBON WITH BOTTOM BUTTON */
 
 	get_template_part( 'sections/ribbon_with_bottom_button' );
+
 
 	/* ABOUT US */
 
@@ -47,6 +49,7 @@ $zerif_bigtitle_show = get_theme_mod('zerif_bigtitle_show');
 
 	endif;
 
+
 	/* OUR TEAM */
 
 	$zerif_ourteam_show = get_theme_mod('zerif_ourteam_show');
@@ -60,6 +63,7 @@ $zerif_bigtitle_show = get_theme_mod('zerif_bigtitle_show');
 	zerif_after_our_team_trigger();
 
 	endif;
+
 
 	/* TESTIMONIALS */
 
@@ -75,9 +79,11 @@ $zerif_bigtitle_show = get_theme_mod('zerif_bigtitle_show');
 
 	endif;
 
+
 	/* RIBBON WITH RIGHT SIDE BUTTON */
 
 	get_template_part( 'sections/ribbon_with_right_button' );
+
 
 	/* LATEST NEWS */
 	$zerif_latestnews_show = get_theme_mod('zerif_latestnews_show');
@@ -92,13 +98,17 @@ $zerif_bigtitle_show = get_theme_mod('zerif_bigtitle_show');
 
 	endif;
 
+	get_template_part( 'sections/volunteer_event_calendar' );
+
+
+
 		/* CONTACT US */
 		$zerif_contactus_show = get_theme_mod('zerif_contactus_show');
 
 		if( isset($zerif_contactus_show) && $zerif_contactus_show != 1 ):
 			?>
 			<section class="contact-us" id="contact">
-				<div class="container">
+				<div class="container"> -->
 					<!-- SECTION HEADER -->
 					<div class="section-header">
 
@@ -143,7 +153,7 @@ $zerif_bigtitle_show = get_theme_mod('zerif_bigtitle_show');
 
 					endif; ?>
 
-				</div> <!-- / END CONTAINER -->
+				</div> <!-- / END CONTAINER
 
 			</section> <!-- / END CONTACT US SECTION-->
 			<?php

@@ -8,21 +8,21 @@
 
 		<!-- SECTION HEADER -->
 
-		<div class="section-header">
+		<!-- <div class="section-header"> -->
 
 			<!-- SECTION TITLE AND SUBTITLE -->
 
 			<?php
 
 			/* Title */
-			zerif_our_focus_header_title_trigger();
+			// zerif_our_focus_header_title_trigger();
 
 			/* Subtitle */
-			zerif_our_focus_header_subtitle_trigger();
+			// zerif_our_focus_header_subtitle_trigger();
 
 			?>
 
-		</div>
+		<!-- </div> -->
 
 		<div class="row">
 
