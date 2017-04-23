@@ -800,7 +800,7 @@ a:active {
 	margin: 0 0 0 6px;
 	color: inherit;
 }
-    
+
 .nav .sub-menu .has_children > a:after{
 	content: '\f0da';
 }
@@ -3482,7 +3482,7 @@ article .posted-on a:hover{
 	top: 0
 }
 .entry-content p {
-	text-align:justify;
+	/*text-align:justify;*/
 }
 .entry-content blockquote {
 	margin-top: 10px;
@@ -3490,7 +3490,7 @@ article .posted-on a:hover{
 	margin-left: 10px;
 	padding-left: 15px;
 	border-left: 3px solid #e96656;
-} 
+}
 .post-img-wrap-large a img{
 	max-width: 100%;
 	width: 100%;
@@ -6572,4 +6572,12 @@ body.custom-background {
 		padding-top: 0;
 	}
 
+}
+
+#our-mission, h3 {
+	padding:50px;
+}
+
+#core-values div{
+	padding:20px;
 }
