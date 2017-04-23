@@ -1003,6 +1003,28 @@ a:active {
 	background: none;
 }
 
+#hero {
+	height: 270px;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+}
+
+#hero .hero-title {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	font-size: 44px;
+	color: #fff;
+	text-transform: uppercase;
+	vertical-align: middle;
+	line-height: 270px;
+}
+
+.hero-content {
+	padding-top: 0;
+}
+
  /*---------------------------------------
  **   10.1 Posts and pages                   -----
 -----------------------------------------*/
@@ -1744,7 +1766,7 @@ ul.nav > li.current_page_item.current > a:before {
 
 }
 .hero-logo {
-
+	width: 300px;
 }
 
 /*----  SECTION:  HOME > INTRO AND SHORT MSGS   ----*/
@@ -3028,6 +3050,25 @@ width: -webkit-calc(100% / 4);
 .ribbon-without-button .col-md-9 {
 	width: 100%;
 }
+
+#home-calendar {
+	background: #fff;
+}
+#home-calendar h2.home-calendar-title {
+	color: #404040;
+}
+
+#home-calendar h2 {
+	padding-bottom: 10px;
+	line-height: 40px;
+	position: relative;
+	display: inline-block;
+	font-size: 45px;
+	text-transform: uppercase;
+	margin-top: 15px;
+	margin-bottom: 0;
+}
+
 /*----------------------------------------
  **   Contact us             -----
 -----------------------------------------*/
@@ -3077,21 +3118,22 @@ width: -webkit-calc(100% / 4);
  **   Footer           -----
 -----------------------------------------*/
 #footer {
-	background: #272727;
+	background: #615b79;
+	color: #fff;
 	line-height: 20px;
 }
-.company-details {
+#footer a {
+	color: #fff;
+}
+#footer a:hover {
 	color: #939393;
+}
+.company-details {
 	padding-top: 67px;
 	padding-bottom: 30px;
 }
 .company-details a {
-	color:#939393;
 	text-decoration:none;
-}
-
-.company-details a:hover {
-	color: #e96656;
 }
 .company-details .icon-top {
 	font-size: 30px;
@@ -3120,11 +3162,11 @@ width: -webkit-calc(100% / 4);
 .copyright {
 	padding-top: 68px;
 	padding-bottom: 68px;
-	background: #171717;
+	background: #4b485e;
+	color: #fff;
 }
 
 .social-media {
-	color: #939393;
 	padding-top: 67px;
 	padding-bottom: 30px;
 }
@@ -3137,15 +3179,12 @@ width: -webkit-calc(100% / 4);
 	margin: 5px;
 }
 .social li a {
-	color: #939393;
 	font-size: 18px;
 }
-.social li a:hover {
-	color: #e96656;
-}
+
 .copyright p {
 	margin-bottom: 0;
-	color: #939393;
+	color: #fff;
 }
 
 .subscribe-form {
