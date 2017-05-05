@@ -185,7 +185,7 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: 'Variela Round';
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5;
@@ -462,7 +462,8 @@ thead th{
 	color: #f7d861;
 }
 .dark-text {
-	color: #404040;
+	/*color: #404040;*/
+	color: #439CC1;
 }
 .white-text {
 	color: #FFFFFF;
@@ -1404,9 +1405,10 @@ object {
 	position: relative;
 	display: inline-block;
 	font-size: 45px;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	margin-top: 15px;
 	margin-bottom: 0;
+	color: #00v2db;
 }
 .section-header .section-legend {
 	font-size: 16px;
@@ -1465,7 +1467,8 @@ object {
 	position: relative;
 	-webkit-box-shadow: 0px 5px 11px 0px rgba(50, 50, 50, 0.08);
 	box-shadow: 0px 5px 11px 0px rgba(50, 50, 50, 0.08);
-	padding: 285px 0 210px;
+	/*padding: 285px 0 210px;*/
+	padding: 120px 0 10px;
 }
 .blog-header-content-wrap {
 	background-color: rgba(0, 0, 0, 0.5);
@@ -1534,7 +1537,8 @@ object {
 	top: 0;
 }
 #utility-nav {
-	background: #615b79;
+	/*background: #615b79;*/
+	background: #512556;
 	color: #fff;
 	min-height: 34px;
 	position: fixed;
@@ -1859,7 +1863,8 @@ ul.nav > li.current_page_item.current > a:before {
 .latest-news {
 	padding-bottom: 66px;
 	padding-top: 100px;
-	background: #ddd;
+	/*background: #ddd;*/
+	background: #edf7f6;
 }
 .carousel-inner {
 /*	margin: 0 30px; */
@@ -3119,7 +3124,8 @@ width: -webkit-calc(100% / 4);
 	background: #fff;
 }
 #home-calendar h2.home-calendar-title {
-	color: #404040;
+	/*color: #404040;*/
+	color: #439CC1;
 }
 
 #home-calendar h2 {
@@ -3128,7 +3134,7 @@ width: -webkit-calc(100% / 4);
 	position: relative;
 	display: inline-block;
 	font-size: 45px;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	margin-top: 15px;
 	margin-bottom: 0;
 }
@@ -3182,7 +3188,8 @@ width: -webkit-calc(100% / 4);
  **   Footer           -----
 -----------------------------------------*/
 #footer {
-	background: #615b79;
+	/*background: #615b79;*/
+	background: #512556;
 	color: #fff;
 	line-height: 20px;
 }
@@ -3190,7 +3197,8 @@ width: -webkit-calc(100% / 4);
 	color: #fff;
 }
 #footer a:hover {
-	color: #939393;
+	/*color: #939393;*/
+	color: #b47dcb;
 }
 .company-details {
 	padding-top: 67px;
@@ -3226,7 +3234,8 @@ width: -webkit-calc(100% / 4);
 .copyright {
 	padding-top: 68px;
 	padding-bottom: 68px;
-	background: #4b485e;
+	/*background: #4b485e;*/
+	background: #b47dcb;
 	color: #fff;
 }
 
@@ -6728,4 +6737,10 @@ body.custom-background {
 
 .header-content-wrap {
 	background: none !important;
+}
+
+.widgettitle{
+
+	color: #439CC1;
+	font-size:36px;
 }
