@@ -1827,6 +1827,7 @@ add_action( 'after_setup_theme', 'zerif_starter_content' );
 
 /**
  * Hack to stop WP from removing BR tags in text editor-style
- * because we are using HTML in the text editor for wonky reasons
+ * because we are using HTML in the text editor for wonky reasons.
+ * OK, v2, We can't use this. It's causing Wordpress to not format the text with paragaphs.
  */
-remove_filter( 'the_content', 'wpautop' );
+// remove_filter( 'the_content', 'wpautop' );

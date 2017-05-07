@@ -19,7 +19,7 @@ echo '<section class="our-team" id="team">';
 		echo '</div>';
 
 		if( is_active_sidebar( 'sidebar-ourteam' ) ) {
-			echo '<div class="row" data-scrollreveal="enter left after 0s over 0.1s">';
+			echo '<div class="row">';
 				dynamic_sidebar( 'sidebar-ourteam' );
 			echo '</div> ';
 		} elseif ( current_user_can( 'edit_theme_options' ) ) {
