@@ -1911,19 +1911,19 @@ ul.nav > li.current_page_item.current > a:before {
 }
 #carousel-homepage-latestnews .item .latestnews-box:nth-child(4n+1) .latestnews-title a:before {
 	/*background: #615b79;*/
-	background: #d47602;
+	background: #d6f3bf;
 }
 #carousel-homepage-latestnews .item .latestnews-box:nth-child(4n+2) .latestnews-title a:before {
 	/*background: #34d293;*/
-	background: #d47602;
+	background: #f9d9a5;
 }
 #carousel-homepage-latestnews .item .latestnews-box:nth-child(4n+3) .latestnews-title a:before {
 	/*background: #3ab0e2;*/
-	background: #d47602;
+	background: #e8d8f0;
 }
 #carousel-homepage-latestnews .item .latestnews-box:nth-child(4n) .latestnews-title a:before {
 	/*background: #f7d861;*/
-	background: #d47602;
+	background: #bee4f5;
 }
 #carousel-homepage-latestnews .item .latestnews-box .latestnews-img .latestnews-img-a {
 	display:block;
