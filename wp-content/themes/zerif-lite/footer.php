@@ -194,8 +194,11 @@
 						echo '<p id="zerif-copyright" class="zerif_hidden_if_not_customizer"></p>';
 					}
 
-					echo '<a href="#">Privacy Policy</a><br>';
-					echo '<a href="#">Site Map</a>';
+					// echo '<a href="#">Privacy Policy</a><br>';
+					// echo '<a href="#">Site Map</a>';
+
+					echo '<a href="/privacy">Privacy Policy</a><br>';
+					echo '<a href="sitemap.xml">Site Map</a>';
 
 				echo '</div>';
 
