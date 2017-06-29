@@ -695,15 +695,18 @@ textarea:focus {
  **   5.1 Links                 -----
 -----------------------------------------*/
 a {
-	color: #615b79 ;
+	/*color: #615b79 ;*/
+	color: #d47602;
 }
 a:visited {
-	color: #615b79;
+	/*color: #615b79;*/
+	color: #d47602;
 }
 a:hover,
 a:focus,
 a:active {
-	color: #4b485e;
+	/*color: #4b485e;*/
+	color: #a73B02;
 }
 /*---------------------------------------
  **   5.2 Menus                  -----
@@ -6754,4 +6757,13 @@ body.custom-background {
 
 	color: #439CC1;
 	font-size:36px;
+}
+
+#volunteer-calendar-link{
+	float:left;
+	-ms-transform: rotate(-14deg); /* IE 9 */
+  	-webkit-transform: rotate(-14deg); /* Chrome, Safari, Opera */
+  	transform: rotate(-14deg);
+	padding-bottom:25px;
+	color:  #ffa161;
 }

@@ -6,6 +6,8 @@
 
 	<div class="container">
 
+		<a id="volunteer-calendar-link" href="#volunteer-calendar">Jump to Volunteer calendar</a>
+
 		<!-- SECTION HEADER -->
 
 		<!-- <div class="section-header"> -->

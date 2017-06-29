@@ -195,7 +195,7 @@ class Default_Calendar_Grid implements Calendar_View {
 
 			<?php edit_post_link( __( 'Edit Calendar', 'google-calendar-events' ), '<p class="simcal-align-right"><small>', '</small></p>', $calendar->id ); ?>
 
-			<table class="simcal-calendar-grid"
+			<table id="volunteer-calendar" class="simcal-calendar-grid"
 			       data-event-bubble-trigger="<?php echo $calendar->event_bubble_trigger; ?>">
 				<thead class="simcal-calendar-head">
 					<tr>
